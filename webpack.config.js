@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 module.exports = {
 	entry: {
-		raycast: path.resolve(__dirname, 'app', 'js', 'index.js')
+		sketchpad: path.resolve(__dirname, 'app', 'js', 'index.js')
 	},
 
 	output: {

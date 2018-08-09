@@ -1,7 +1,7 @@
 {
   "name": "shader-sketchpad",
   "version": "1.0.0",
-  "description": "A playground about webgl and more.",
+  "description": "A sketchpad to edit some shaders",
   "main": "app/js/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,19 +11,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HelloWorld017/working-with-graphics.git"
+    "url": "git+https://github.com/HelloWorld017/shader-sketchpad.git"
   },
   "keywords": [
     "webgl",
-    "raycast",
     "3d"
   ],
   "author": "Khinenw",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/HelloWorld017/working-with-graphics/issues"
+    "url": "https://github.com/HelloWorld017/shader-sketchpad/issues"
   },
-  "homepage": "https://github.com/HelloWorld017/working-with-graphics#readme",
+  "homepage": "https://github.com/HelloWorld017/shader-sketchpad#readme",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",

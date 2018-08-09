@@ -1,2 +1,2 @@
-# Working with Graphics
-A playground about webgl and more.
+# Shader sketchpad
+A sketchpad to edit some shaders.
