@@ -69,8 +69,8 @@ class Renderer {
 	}
 
 	generateGeometry() {
-		for (let z = 0; z > -this.renderTo; z -= this.stride) {
-			for (let x = -this.renderTo; x < this.renderTo; x += this.stride) {
+		for (let z = -this.renderTo; z <= 0; z += this.stride) {
+			for (let x = this.renderTo; x > -this.renderTo; x -= this.stride) {
 				this.geometries.push(x, Math.random() * this.stride, z);
 			}
 		}
@@ -84,8 +84,8 @@ class Renderer {
 		let i = 0;
 		let geometries = this.geometries;
 
-		for (let z = 0; z > -this.renderTo; z -= this.stride) {
-			for (let x = -this.renderTo; x < this.renderTo; x += this.stride) {
+		for (let z = -this.renderTo; z <= 0; z += this.stride) {
+			for (let x = this.renderTo; x > -this.renderTo; x -= this.stride) {
 				this.vertices.push(geometries[i], geometries[i + 1], geometries[i + 2]);
 				this.vertices.push(x - this.stride / 2, 0, z - this.stride / 2);
 				this.vertices.push(x + this.stride / 2, 0, z - this.stride / 2);
@@ -111,7 +111,7 @@ class Renderer {
 	updateGeometry() {
 		for(let i = 1; i < this.geometries.length; i += 3) {
 			this.geometries[i] += Math.random() * 1 - 0.5;
-			this.geometries[i] = Math.max(0, Math.min(this.renderTo, this.geometries[i]));
+			this.geometries[i] = Math.max(0, Math.min(this.stride * 2, this.geometries[i]));
 			/*
 			this.geometries[i + 1] -= 0.01;
 
@@ -150,7 +150,7 @@ class Renderer {
 	render() {
 		this.gl.clear(this.gl.COLOR_BUFFER_BIT | this.gl.DEPTH_BUFFER_BIT);
 		this.initBuffers();
-		this.gl.bufferData(this.gl.ARRAY_BUFFER, new Float32Array(this.vertices), this.gl.STATIC_DRAW);
+		this.gl.bufferData(this.gl.ARRAY_BUFFER, new Float32Array(this.updateGeometry()), this.gl.STATIC_DRAW);
 		this.gl.uniformMatrix4fv(this.perspective, false, this.matrix);
 		this.gl.drawArrays(this.gl.TRIANGLES, 0, this.vertices.length / 3);
 	}

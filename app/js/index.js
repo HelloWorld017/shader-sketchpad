@@ -1,6 +1,6 @@
 import Renderer from "./Renderer";
 
 const renderer = new Renderer(document.querySelector('canvas'));
-renderer.render();
+setInterval(() => renderer.render(), 30);
 
 window.renderer = renderer;
