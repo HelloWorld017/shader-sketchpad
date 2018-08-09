@@ -1,0 +1,40 @@
+{
+  "name": "shader-sketchpad",
+  "version": "1.0.0",
+  "description": "A playground about webgl and more.",
+  "main": "app/js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HelloWorld017/working-with-graphics.git"
+  },
+  "keywords": [
+    "webgl",
+    "raycast",
+    "3d"
+  ],
+  "author": "Khinenw",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HelloWorld017/working-with-graphics/issues"
+  },
+  "homepage": "https://github.com/HelloWorld017/working-with-graphics#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "raw-loader": "^0.5.1",
+    "webpack": "^4.16.4",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "dependencies": {
+    "gl-matrix": "^2.7.1",
+    "webgl-debug": "^2.0.1"
+  }
+}
